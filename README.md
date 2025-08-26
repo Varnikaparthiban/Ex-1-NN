@@ -71,7 +71,7 @@ df.duplicated()
 
 ### checking for Outliers:
 ```
-df.describe
+df.describe()
 ```
 
 ### Dropping string values data from dataset

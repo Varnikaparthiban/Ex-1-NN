@@ -1,7 +1,7 @@
-<H3>ENTER YOUR NAME</H3>
-<H3>ENTER YOUR REGISTER NO.</H3>
+<H3>ENTER YOUR NAME : VARNIKA P</H3>
+<H3>ENTER YOUR REGISTER NO: 212223240170</H3>
 <H3>EX. NO.1</H3>
-<H3>DATE</H3>
+<H3>DATE: 26.08.2025</H3>
 <H1 ALIGN =CENTER> Introduction to Kaggle and Data preprocessing</H1>
 
 ## AIM:
@@ -37,11 +37,98 @@ STEP 5:Normalizing the data<BR>
 STEP 6:Splitting the data into test and train<BR>
 
 ##  PROGRAM:
-TYPE YOUR CODE HERE
+
+### Import Libraries
+```
+import pandas as pd
+import io
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.model_selection import train_test_split
+```
+
+### Read the dataset
+```
+df=pd.read_csv("Churn_Modelling.csv")
+print(df)
+```
+### Checking data
+```
+df.head()
+df.tail()
+df.columns
+```
+
+### Handling missing data
+```
+df.isnull().sum()
+```
+
+### Duplicate values
+```
+df.duplicated()
+```
+
+### checking for Outliers:
+```
+df.describe
+```
+
+### Dropping string values data from dataset
+```
+data = df.drop(['Surname', 'Geography','Gender'], axis=1)
+data.head()
+```
+
+### Normalize the dataset
+```
+scaler=MinMaxScaler()
+df1=pd.DataFrame(scaler.fit_transform(data))
+print(df1)
+```
+### Splitting the dataset
+```
+X=df.iloc[:,:-1].values
+y=df.iloc[:,-1].values
+print(X)
+print(y)
+```
+
+### Training and testing model
+
+```
+X_train ,X_test ,y_train,y_test=train_test_split(X,y,test_size=0.2)
+print("X_train\n")
+print(X_train)
+print("\nLenght of X_train ",len(X_train))
+print("\nX_test\n")
+print(X_test)
+print("\nLenght of X_test ",len(X_test))
+```
 
 
 ## OUTPUT:
-SHOW YOUR OUTPUT HERE
+
+### Original Dataset:
+<img width="611" height="665" alt="image" src="https://github.com/user-attachments/assets/20ec7943-9d48-4c18-a05a-e0ed7c2e94fe" />
+
+### Missing data:
+<img width="208" height="495" alt="image" src="https://github.com/user-attachments/assets/033e590e-11e1-4e47-b0bb-732517fb8a26" />
+
+### Duplicated data:
+<img width="200" height="429" alt="image" src="https://github.com/user-attachments/assets/005cf6a6-e945-40a1-acf5-14f1764bb0ee" />
+
+### Outliers:
+<img width="1214" height="281" alt="image" src="https://github.com/user-attachments/assets/b689995e-02ae-45af-b316-3efb9a314bcb" />
+
+### Normalize dataset:
+<img width="611" height="457" alt="image" src="https://github.com/user-attachments/assets/738e8ec9-5913-4c72-992c-2b960048122d" />
+
+### Split the dataset:
+<img width="392" height="146" alt="image" src="https://github.com/user-attachments/assets/35e2be85-5925-4a15-9c40-de45e5b481d7" />
+
+### Training and testing dataset:
+<img width="441" height="408" alt="image" src="https://github.com/user-attachments/assets/dc55f1d2-f269-4286-8580-73321f8521d0" />
 
 
 ## RESULT:

@@ -109,6 +109,9 @@ print("\nLenght of X_test ",len(X_test))
 
 ## OUTPUT:
 
+### Checking Data:
+<img width="619" height="107" alt="image" src="https://github.com/user-attachments/assets/4531dcb8-5a1f-4fd2-a543-f0932e84882f" />
+
 ### Original Dataset:
 <img width="611" height="665" alt="image" src="https://github.com/user-attachments/assets/20ec7943-9d48-4c18-a05a-e0ed7c2e94fe" />
 
@@ -120,6 +123,10 @@ print("\nLenght of X_test ",len(X_test))
 
 ### Outliers:
 <img width="1214" height="281" alt="image" src="https://github.com/user-attachments/assets/b689995e-02ae-45af-b316-3efb9a314bcb" />
+
+### Dataset after Dropping String Columns:
+<img width="965" height="200" alt="image" src="https://github.com/user-attachments/assets/27f2895b-915e-4c82-b5c7-fdc560524b0c" />
+
 
 ### Normalize dataset:
 <img width="611" height="457" alt="image" src="https://github.com/user-attachments/assets/738e8ec9-5913-4c72-992c-2b960048122d" />
